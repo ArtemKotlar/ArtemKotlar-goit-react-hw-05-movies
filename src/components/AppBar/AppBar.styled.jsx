@@ -3,6 +3,7 @@ import { NavLink } from 'react-router-dom';
 
 export const NavItem = styled(NavLink)`
   display: flex;
+  font-size: 20px;
   align-items: center;
   gap: ${p => p.theme.space[3]}px;
   padding: ${p => p.theme.space[3]}px;
@@ -15,6 +16,6 @@ export const NavItem = styled(NavLink)`
   }
   :hover:not(.active),
   :focus-visible:not(.active) {
-    color: ${p => p.theme.colors.primary};
+    color: ${p => p.theme.colors.accent};
   }
 `;

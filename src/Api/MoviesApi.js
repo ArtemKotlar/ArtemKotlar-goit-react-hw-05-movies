@@ -7,7 +7,7 @@ const instance = axios.create({
   baseURL: BASE_URL,
 });
 
-export const getTreending = () => {
+export const getTrending = () => {
   return instance.get(`/trending/all/week?${API_KEY}`);
 };
 
