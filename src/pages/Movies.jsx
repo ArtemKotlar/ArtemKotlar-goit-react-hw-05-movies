@@ -1,5 +1,6 @@
 import { getByName } from 'api/MoviesApi';
-import { MovieList } from 'components/MovieList/MovieList';
+
+import { MovieSearch } from 'components/MovieList/MovieSearch';
 import { SearchBox } from 'components/SearchBox/SearchBox';
 import { useEffect, useState } from 'react';
 import { useSearchParams } from 'react-router-dom';
@@ -28,7 +29,7 @@ const Movies = () => {
   return (
     <>
       <SearchBox onChange={handleChange} onSubmit={handleSubmit} />
-      <MovieList movies={movies} />
+      <MovieSearch movies={movies} />
     </>
   );
 };

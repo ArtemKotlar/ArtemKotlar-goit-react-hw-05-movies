@@ -11,7 +11,7 @@ export const MovieCard = ({ movie }) => {
   const genresList = genres.map(genre => genre.name).join(', ');
 
   return (
-    <Box>
+    <Box display="flex" gridGap={6}>
       <div>
         <img src={imgUrl} alt={title} width="350" />
       </div>

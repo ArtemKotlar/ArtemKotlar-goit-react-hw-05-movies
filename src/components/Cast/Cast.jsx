@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import { NavLink, useParams } from 'react-router-dom';
 import { getCast } from 'api/MoviesApi';
+import { Img, List, ListItem } from './Cast.styled';
 
 const Cast = () => {
   const [cast, setCast] = useState(null);
@@ -16,12 +17,12 @@ const Cast = () => {
   }
 
   return (
-    <div>
+    <List>
       {cast.length === 0 && <p>Sorry, we don't have any cast on this movie</p>}
 
       {cast.map(({ id, profile_path, name, original_name, character }) => (
-        <NavLink key={id}>
-          <img
+        <ListItem key={id}>
+          <Img
             width="200"
             src={
               profile_path
@@ -34,9 +35,9 @@ const Cast = () => {
             <h2>{name && original_name}</h2>
             <p>{character}</p>
           </div>
-        </NavLink>
+        </ListItem>
       ))}
-    </div>
+    </List>
   );
 };
 

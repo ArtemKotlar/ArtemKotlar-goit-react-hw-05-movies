@@ -2,6 +2,7 @@ import { MovieCard } from 'components/MovieCart/MovieCart';
 import { getDetails } from 'api/MoviesApi';
 import { useState, useEffect } from 'react';
 import { useParams, useLocation, NavLink, Outlet } from 'react-router-dom';
+import { Back, Container } from './MovieDetails.styled';
 
 
 const MovieDetails = () => {
@@ -20,17 +21,17 @@ const MovieDetails = () => {
 
   return (
     <>
-      <div>
-        <NavLink to={backLink}>← Go back</NavLink>
+      <Container>
+        <Back to={backLink}>← Go back</Back>
         <MovieCard movie={movieDetails} />
-      </div>
+      </Container>
       <div>
-        <NavLink to={'cast'} state={{ from: backLink }}>
+        <Back to={'cast'} state={{ from: backLink }}>
           Cast
-        </NavLink>
-        <NavLink to={'reviews'} state={{ from: backLink }}>
+        </Back>
+        <Back to={'reviews'} state={{ from: backLink }}>
           Reviews
-        </NavLink>
+        </Back>
       </div>
       <Outlet />
     </>
