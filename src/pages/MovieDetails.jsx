@@ -1,8 +1,8 @@
 import { MovieCard } from 'components/MovieCart/MovieCart';
+import { getDetails } from 'api/MoviesApi';
+import { useState, useEffect } from 'react';
+import { useParams, useLocation, NavLink, Outlet } from 'react-router-dom';
 
-const { getDetails } = require('api/MoviesApi');
-const { useEffect, useState } = require('react');
-const { useParams, useLocation, NavLink, Outlet } = require('react-router-dom');
 
 const MovieDetails = () => {
   const [movieDetails, setMovieDetails] = useState(null);
