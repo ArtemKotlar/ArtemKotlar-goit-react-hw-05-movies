@@ -15,7 +15,7 @@ export const App = () => {
       <AppBar />
       <Suspense fallback={<div>Loading...</div>}>
         <Routes>
-          <Route path="/" element={<Layout />}>
+          {/* <Route path="/" element={<Layout />}> */}
             <Route index element={<Home />} />
             <Route path="movies" element={<Movies />} />
             <Route path="movies/:movieId" element={<MoviesDetails />}>
@@ -23,7 +23,7 @@ export const App = () => {
               <Route path="reviews" element={<Reviews />} />
               <Route path="*" element={<h1>Movie not found</h1>} />
             </Route>
-          </Route>
+          {/* </Route> */}
         </Routes>
       </Suspense>
     </>

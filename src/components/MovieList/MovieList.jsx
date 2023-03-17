@@ -1,4 +1,5 @@
-import { NavLink, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
+import { Link, MovieImg, MovieItem, MoviesBlock } from './Movie.styled';
 
 export const MovieList = ({ movies }) => {
   const location = useLocation();
@@ -6,11 +7,12 @@ export const MovieList = ({ movies }) => {
 
   return (
     movies && (
-      <ul>
+      
+      <MoviesBlock>
         {movies.map(({ id, title, original_name, poster_path }) => (
-          <li key={id}>
-            <NavLink to={`/movies/${id}`} state={{ from: location }}>
-              <img
+          <MovieItem key={id}>
+            <Link to={`/movies/${id}`} state={{ from: location }}>
+              <MovieImg
                 src={
                   poster_path
                     ? imageBaseUrl + poster_path
@@ -19,10 +21,10 @@ export const MovieList = ({ movies }) => {
                 alt="Foto"
               />
               <p>{title ?? original_name}</p>
-            </NavLink>
-          </li>
+            </Link>
+          </MovieItem>
         ))}
-      </ul>
+      </MoviesBlock>
     )
   );
 };
