@@ -6,7 +6,7 @@ export const Text = styled.h1`
   font-size: 28px;
   text-transform: uppercase;
   text-shadow: 3px 5px 6px #f50808;
-  color: #083ff5;
+  color: #ffffff;
   text-align: center;
   margin: 0;
   padding: 20px;
@@ -32,7 +32,7 @@ export const Link = styled(NavLink)`
   text-align: center;
   font-weight: 700;
   font-size: 22px;
-  color: #083ff5;
+  color: #ffffff;
   text-decoration: none;
 `;
 

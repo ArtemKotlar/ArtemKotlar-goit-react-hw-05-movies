@@ -1,7 +1,7 @@
 import { MovieCard } from 'components/MovieCart/MovieCart';
 import { getDetails } from 'api/MoviesApi';
 import { useState, useEffect } from 'react';
-import { useParams, useLocation, NavLink, Outlet } from 'react-router-dom';
+import { useParams, useLocation, Outlet } from 'react-router-dom';
 import { Back, Container } from './MovieDetails.styled';
 
 

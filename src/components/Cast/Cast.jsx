@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { NavLink, useParams } from 'react-router-dom';
+import { useParams } from 'react-router-dom';
 import { getCast } from 'api/MoviesApi';
 import { Img, List, ListItem } from './Cast.styled';
 
