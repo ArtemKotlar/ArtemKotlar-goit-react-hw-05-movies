@@ -1,4 +1,4 @@
-import { getByName } from 'api/MoviesApi';
+import { getByName } from 'api/MoviesAPI';
 
 import { MovieSearch } from 'components/MovieList/MovieSearch';
 import { SearchBox } from 'components/SearchBox/SearchBox';
